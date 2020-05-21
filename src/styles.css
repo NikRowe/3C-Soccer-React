@@ -50,3 +50,10 @@
   text-align: center;
 }
 
+.pageTitle{
+  color: #1376bc;
+  font-weight: bold;
+  border-bottom: solid 6px #fff200;
+  margin: auto;
+  margin-bottom: 4vh;
+}
