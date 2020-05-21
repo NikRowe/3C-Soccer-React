@@ -19,14 +19,14 @@ const NavBar = (props) => {
 
     return (
         <div>
-            <Navbar light expand="md" className="navbar pt-4">
+            <Navbar light expand="md" className="navbar pt-1">
                 {/* Mobile Display Logo */}
-                <NavbarBrand href="/" className="d-md-none"><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
+                <NavbarBrand href="/" className="d-md-none "><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav navbar>
+                    <Nav  pills navbar>
                         <NavItem>
-                            <NavLink href="/about">About</NavLink>
+                            <NavLink active href="/about">About</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="/summerCamps">Summer Camps</NavLink>
