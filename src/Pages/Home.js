@@ -11,9 +11,13 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h1>3C Home Page</h1>
-                <h2>You got this Nik!</h2>
+            <div className="container-fluid">
+                <div className="row">
+                    {/* The Video */}
+                    <video autoPlay muted loop id="bgVideo">
+                        <source src="Img/OVWC.mp4" type="video/mp4" />
+                    </video>
+                </div>
             </div>
         )
     }

@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import NavBar from './Components/NavBarComponent'
 import Home from './Pages/Home'
 import About from './Pages/About'
+import Footer from './Components/FooterComponent'
 import SmallGroupTraining from './Pages/SmallGroupTraining'
 import SummerCamps from './Pages/SummerCamps'
 import "./styles.css";
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <div className="App">
+      <div className="App pt-5">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
@@ -19,6 +20,7 @@ export default function App() {
           <Route exact path="/summerCamps" component={SummerCamps} />
         </Switch>
       </div>
+      <Footer />
     </>
   );
 }
