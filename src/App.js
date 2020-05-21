@@ -15,9 +15,11 @@ export default function App() {
       <div className="App pt-5">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/smallGroupTraining" component={SmallGroupTraining} />
-          <Route exact path="/summerCamps" component={SummerCamps} />
+          <div className="pages">
+            <Route exact path="/about" component={About} />
+            <Route exact path="/smallGroupTraining" component={SmallGroupTraining} />
+            <Route exact path="/summerCamps" component={SummerCamps} />
+          </div>
         </Switch>
       </div>
       <Footer />

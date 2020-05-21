@@ -19,24 +19,24 @@ const NavBar = (props) => {
 
     return (
         <div>
-            <Navbar light expand="md" className="navbar pt-1">
+            <Navbar sticky="top" light expand="lg" className="navbar pt-1">
                 {/* Mobile Display Logo */}
-                <NavbarBrand href="/" className="d-md-none "><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
+                <NavbarBrand href="/" className="d-lg-none "><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav  pills navbar>
-                        <NavItem>
-                            <NavLink active href="/about">About</NavLink>
+                <Collapse isOpen={isOpen} navbar className="collapse">
+                    <Nav navbar >
+                        <NavItem className="navButton">
+                            <NavLink className="text-white" href="/about">About</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink href="/summerCamps">Summer Camps</NavLink>
+                        <NavItem className="navButton">
+                            <NavLink className="text-white" href="/summerCamps">Summer Camps</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink href="/smallGroupTraining">Small Group Trainings</NavLink>
+                        <NavItem className="navButton">
+                            <NavLink className="text-white" href="/smallGroupTraining">Small Group/Individual Trainings</NavLink>
                         </NavItem>
                     </Nav>
                     {/* Desktop display logo */}
-                    <NavbarBrand href="/" className="mx-auto d-none d-md-block mt-4 mb-4 pt-5 pb-1"><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
+                    <NavbarBrand href="/" className="desktopNavImg d-none d-lg-block mt-4 mb-4 pt-5 pb-1"><img src="/Img/Logo.png" width="175" height="175" alt="3C Soccer Logo"/></NavbarBrand>
                     <NavbarText className="ml-auto">by Shep</NavbarText>
                 </Collapse>
             </Navbar>

@@ -1,17 +1,17 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  border: 0;
 }
 
 #bgVideo {
     position: relative;
     left: 0;
     min-width: 100vw;
-    top: -5vh;
     z-index: -1;
+}
+
+.pages{
+  margin-top: 15vh;
 }
 
 .site-footer {
@@ -26,5 +26,27 @@
 .navbar{
   background-color: white;
   height: 15vh;
+  position: fixed;
+  width: 100%;
+}
+
+.navButton{
+  background-color: #1376bc;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  padding: .5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin: .25vw
+
+}
+
+.desktopNavImg{
+  margin-left: 10vw;
+}
+
+.collapse{
+  text-align: center;
 }
 
