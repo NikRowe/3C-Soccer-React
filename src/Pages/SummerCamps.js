@@ -19,7 +19,7 @@ class SummerCamps extends Component {
                 <div style={{fontSize: 20}}>
                     <p>Due to COVID-19 restrictions, our Summer Camp scheduled for <span style={{fontWeight: 'bold'}}>June 16th - July 10th</span> has been postponed.</p>
                     <p>To receive updates on camp openings:</p>
-                    <Button color="primary">Register</Button>
+                    <Button className="navButton font-weight-bold">Register</Button>
                 </div>
             </>
         )
