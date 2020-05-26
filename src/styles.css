@@ -42,6 +42,17 @@
 
 }
 
+.regButton{
+  background-color: #1376bc;
+  color: white;
+}
+
+.regButton:hover {
+  background-color: white;
+  color: #1376bc;
+  border: solid 2px #1376bc
+}
+
 .desktopNavImg{
   margin-left: 10vw;
 }
@@ -56,4 +67,8 @@
   border-bottom: solid 6px #fff200;
   margin: auto;
   margin-bottom: 4vh;
+}
+
+.modalHeader { 
+  color: #1376bc;
 }

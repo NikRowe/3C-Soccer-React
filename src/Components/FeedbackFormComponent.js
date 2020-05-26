@@ -1,69 +1,72 @@
 import React from 'react'
-import { Button } from 'reactstrap'
+import { Button, Form, FormGroup, Input, Label, Col, Row } from 'reactstrap'
 
 function FeedbackForm() {
     return (
-        <form>
-            <label htmlFor="playerName"> Player Name </label>
-            <input
-                type='text'
-                name='playerName'
-                required
-            />
-            <br/>
-            <label htmlFor="parentName"> Parent Name </label>
-            <input
-                type='text'
-                name='parentName'
-                required
-            />
-            <br/>
-            <label htmlFor="DOB"> D.O.B. </label>
-            <input
-                type='text'
-                name='DOB'
-                required
-                minLength='8'
-                maxLength='10'
-                placeholder='xx/xx/xxxx'
-            />
-            <br/>
-            <label htmlFor="years"> Years Played </label>
-            <input
-                type='number'
-                name='years'
-                required
-                min='1'
-                max='2'
-            />
-            <br/>
-            <label htmlFor="address"> Address </label>
-            <input
-                type='text'
-                name='address'
-                placeholder=' (optional) '
-            />
-            <br/>
-            <label htmlFor="email"> E-Mail </label>
-            <input
-                type='email'
-                name='email'
-                required
-            />
-            <br/>
-            <label htmlFor="phone"> 10-Digit Phone # </label>
-            <input
-                type='tel'
-                name='phone'
-                required
-                maxLength='12'
-                minLength='12'
-                placeholder='xxx-xxx-xxxx'
-            />
-            <br/>
-            
-            <Button type='submit'>Send It!</Button>
-        </form>
+        <Form>
+            <FormGroup>
+                <Label htmlFor='playerName'>Player Name</Label>
+                <Input
+                    required
+                    type='text'
+                    id='playerName'
+                    name='playerName'
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label htmlFor='parentName'>Parent Name</Label>
+                <Input
+                    required
+                    type='text'
+                    id='parentName'
+                    name='parentName'
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label htmlFor='DOB'> Player D.O.B.</Label>
+                <Input
+                    required
+                    type='date'
+                    id='DOB'
+                    name='DOB'
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label htmlFor='address'> Address </Label>
+                <Input
+                    type='text'
+                    id='address'
+                    name='address'
+                    placeholder=' (optional) '
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label htmlFor='phone'> Phone # </Label>
+                <Input
+                    required
+                    type='tel'
+                    id='phone'
+                    name='phone'
+                    maxLength='12'
+                    minLength='12'
+                    placeholder='xxx-xxx-xxxx'
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label htmlFor='yearsPlayed'> Competitive Years Played</Label>
+                <Input
+                    required
+                    type='number'
+                    id='yearsPlayed'
+                    name='yearsPlayed'
+                    maxLength='2'
+                    minLength='1'
+                />
+            </FormGroup>
+            <Col sm={{ offset: 4}}>
+                <Button type='submit' className='regButton'>Register</Button>
+            </Col>
+        </Form>
     )
 }
 

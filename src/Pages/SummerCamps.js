@@ -30,7 +30,7 @@ class SummerCamps extends Component {
                     <Button className="navButton font-weight-bold" onClick={this.toggleModal}>Register</Button>
                 </div>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Register for Camp!</ModalHeader>
+                    <ModalHeader className='modalHeader' toggle={this.toggleModal} > <h1>Register for Camp! </h1> </ModalHeader>
                     <ModalBody>
                         <FeedbackForm />
                     </ModalBody>
