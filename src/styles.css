@@ -10,13 +10,17 @@
     z-index: -1;
 }
 
+body {
+  overflow: hidden;
+}
+
 .pages{
-  margin-top: 15vh;
+  margin-top:9vh;
 }
 
 .site-footer {
   background-color: white;
-  height: 15vh;
+  height: 10vh;
   padding: 40px 0;
   position: fixed;
   bottom: 0;
@@ -25,7 +29,7 @@
 
 .navbar{
   background-color: white;
-  height: 15vh;
+  height: 8.5vh;
   position: fixed;
   width: 100%;
 }
@@ -35,9 +39,9 @@
   color: white;
   border-radius: 50px;
   text-align: center;
-  padding: .5vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding: .15vw;
+  padding-left: .5vw;
+  padding-right: .5vw;
   margin: .25vw
 
 }
@@ -54,7 +58,7 @@
 }
 
 .desktopNavImg{
-  margin-left: 10vw;
+  margin-right: 30vw;
 }
 
 .collapse{
