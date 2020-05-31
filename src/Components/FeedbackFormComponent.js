@@ -17,6 +17,7 @@ function FeedbackForm() {
             method: 'POST',
             body: JSON.stringify({ playerName, parentName, DOB, address, phone, yearsPlayed }),
         }).then(() => setIsSent(true))
+        .catch(() => alert("There was an error, please try again"))
     }
 
     const thankYouMessage = <p style={{textAlign: 'center'}}> Thank you for registering, we will be in touch! </p>
