@@ -28,7 +28,7 @@ const NavBar = (props) => {
     return (
         <Navbar sticky="top" light expand="lg" className="navbar">
             {/* Mobile Display Logo */}
-            <NavbarBrand href="/" className="d-lg-none pt-5"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse">
