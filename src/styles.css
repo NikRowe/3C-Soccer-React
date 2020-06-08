@@ -19,7 +19,7 @@ body {
 }
 
 .pages{
-  margin-top:30vh;
+  margin-top:32vh;
 }
 
 .site-footer {
@@ -62,6 +62,7 @@ body {
 
 .desktopNavImg{
   margin-right: 30vw;
+  position: fixed;
 }
 
 .collapse{
