@@ -32,6 +32,7 @@ function FeedbackForm() {
                 <FormGroup>
                     <Label for="programSelect"> Program </Label>
                     <Input
+                        required
                         type="select"
                         name="select"
                         id="programSelect"
@@ -92,11 +93,12 @@ function FeedbackForm() {
                     <Label htmlFor='phone'> Phone # </Label>
                     <Input
                         required
+                        pattern='^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$'
                         type='tel'
                         id='phone'
                         name='phone'
                         maxLength='12'
-                        minLength='12'
+                        minLength='10'
                         placeholder='xxx-xxx-xxxx'
                         value={phone}
                         onChange={e => setPhone(e.target.value)}
