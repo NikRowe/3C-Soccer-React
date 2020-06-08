@@ -28,8 +28,13 @@ const NavBar = (props) => {
     return (
         <Navbar sticky="top" light expand="lg" className="navbar">
             {/* Mobile Display Logo */}
-            <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            
+            {/* <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand> */}
+            <Tablet>
+                <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            </Tablet>
+            <Mobile>
+                <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            </Mobile>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse">
                 <Nav navbar className="mr-auto">
