@@ -8,6 +8,7 @@ function FeedbackForm() {
     const [DOB, setDOB] = useState('')
     const [address, setAddress] = useState('')
     const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
     const [yearsPlayed, setYearsPlayed] = useState('')
     const [isSent, setIsSent] = useState(false)
 
@@ -17,15 +18,24 @@ function FeedbackForm() {
             method: 'POST',
             body: JSON.stringify({ playerName, parentName, DOB, address, phone, yearsPlayed }),
         }).then(() => setIsSent(true))
-        .catch(() => alert("There was an error, please try again"))
+            .catch(() => alert("There was an error, please try again"))
     }
 
-    const thankYouMessage = <p style={{textAlign: 'center'}}> Thank you for registering, we will be in touch! </p>
+    const thankYouMessage = <p style={{ textAlign: 'center' }}> Thank you for registering, we will be in touch! </p>
 
     return (
         isSent
             ? thankYouMessage
             : <Form onSubmit={values => submit(values)}>
+                <FormGroup>
+                    <Label for="programSelect"> Program </Label>
+                    <Input type="select" name="select" id="programSelect" defaultValue='Select A Program' >
+                        <option disabled>Select A Program</option>
+                        <option>Summer Camp</option>
+                        <option>Small Group Training</option>
+                        <option>Individual Training</option>
+                    </Input>
+                </FormGroup>
                 <FormGroup>
                     <Label htmlFor='playerName'>Player Name</Label>
                     <Input
@@ -85,6 +95,19 @@ function FeedbackForm() {
                     />
                 </FormGroup>
                 <FormGroup>
+                    <Label htmlFor='email'> Email </Label>
+                    <Input
+                        required
+                        type='email'
+                        id='email'
+                        name='email'
+                        minLength='5'
+                        placeholder='CoachShep@3cSoccer.com'
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                </FormGroup>
+                <FormGroup>
                     <Label htmlFor='yearsPlayed'> Competitive Years Played</Label>
                     <Input
                         required
@@ -96,6 +119,10 @@ function FeedbackForm() {
                         value={yearsPlayed}
                         onChange={e => setYearsPlayed(e.target.value)}
                     />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="comments"> Anything else you'd like us to know </Label>
+                    <Input type="textarea" name="comments" id="comments" />
                 </FormGroup>
                 <Col sm={{ offset: 4 }}>
                     <Button type='submit' className='regButton'>Register</Button>

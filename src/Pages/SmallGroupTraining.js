@@ -25,7 +25,7 @@ class SmallGroupTraining extends Component {
                     <h1 className="col-sm-6 col-md-5 text-nowrap pageTitle"> Small Group/Individual Training </h1>
                 </div>
                 <div style={{fontSize: 20}}>
-                    <p>With things changing rapidly and bans being lifted please click to register fore more info about small group training</p>
+                    <p>With things changing rapidly and bans being lifted please click to register for more info about small group training</p>
                     <Button className="navButton font-weight-bold" onClick={this.toggleModal}>Register</Button>
                 </div>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
