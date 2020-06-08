@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import {
     Collapse,
     Navbar,
@@ -9,17 +10,26 @@ import {
     NavLink,
 } from 'reactstrap';
 
-
 const NavBar = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const Tablet = ({ children }) => {
+        const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+        return isTablet ? children : null
+    }
+    const Mobile = ({ children }) => {
+        const isMobile = useMediaQuery({ maxWidth: 767 })
+        return isMobile ? children : null
+    }
+
     return (
         <Navbar sticky="top" light expand="lg" className="navbar">
             {/* Mobile Display Logo */}
-            <NavbarBrand href="/" className="d-lg-none "><img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /></NavbarBrand>
+            <NavbarBrand href="/" className="d-lg-none pt-5"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse">
                 <Nav navbar className="mr-auto">
