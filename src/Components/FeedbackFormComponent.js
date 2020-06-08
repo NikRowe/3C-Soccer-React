@@ -35,7 +35,6 @@ function FeedbackForm() {
                         type="select"
                         name="select"
                         id="programSelect"
-                        defaultValue='Select A Program'
                         value={programSelect}
                         onChange={e => setProgramSelect(e.target.value)}
                     >

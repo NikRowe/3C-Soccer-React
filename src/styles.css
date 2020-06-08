@@ -14,8 +14,12 @@ body {
   overflow: hidden;
 }
 
+.home {
+  margin-top: -20vh;
+}
+
 .pages{
-  margin-top:9vh;
+  margin-top:30vh;
 }
 
 .site-footer {
@@ -30,7 +34,6 @@ body {
 .navbar{
   background-color: white;
   height: 8.5vh;
-  position: fixed;
   width: 100%;
 }
 

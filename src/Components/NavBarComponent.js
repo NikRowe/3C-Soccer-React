@@ -34,7 +34,8 @@ const NavBar = (props) => {
                     </NavItem>
                 </Nav>
                 {/* Desktop display logo */}
-                <NavbarBrand href="/" className="desktopNavImg d-none d-lg-block mr-0 mt-5 pt-4 pb-0"><img src="/Img/Logo.png" width="150" height="150" alt="3C Soccer Logo" /></NavbarBrand>
+                <NavbarBrand href="/" className="desktopNavImg d-none d-lg-block mr-0 mt-5 pt-4 pb-0"><img src="/Img/Logo.png" width="150" height="150" alt="3C Soccer Logo" />
+                </NavbarBrand>
             </Collapse>
         </Navbar>
     )
