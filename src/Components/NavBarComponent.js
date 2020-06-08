@@ -36,7 +36,7 @@ const NavBar = (props) => {
                 <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             </Mobile> */}
             <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar className="collapse">
+            <Collapse isOpen={isOpen} navbar className="collapse position-relative">
                 <Nav navbar className="mr-auto">
                     <NavItem className="navButton">
                         <NavLink className="text-white" href="/about">About</NavLink>
