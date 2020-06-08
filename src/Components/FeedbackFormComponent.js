@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Input, Label, Col } from 'reactstrap'
 
 function FeedbackForm() {
 
+    const [programSelect, setProgramSelect] = useState('')
     const [playerName, setPlayerName] = useState('')
     const [parentName, setParentName] = useState('')
     const [DOB, setDOB] = useState('')
@@ -10,13 +11,14 @@ function FeedbackForm() {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [yearsPlayed, setYearsPlayed] = useState('')
+    const [comments, setComments] = useState('')
     const [isSent, setIsSent] = useState(false)
 
     const submit = e => {
         e.preventDefault();
         fetch(`https://hooks.zapier.com/hooks/catch/7634421/oiqrim1/`, {
             method: 'POST',
-            body: JSON.stringify({ playerName, parentName, DOB, address, phone, yearsPlayed }),
+            body: JSON.stringify({ programSelect, playerName, parentName, DOB, address, phone, email, yearsPlayed, comments }),
         }).then(() => setIsSent(true))
             .catch(() => alert("There was an error, please try again"))
     }
@@ -29,7 +31,14 @@ function FeedbackForm() {
             : <Form onSubmit={values => submit(values)}>
                 <FormGroup>
                     <Label for="programSelect"> Program </Label>
-                    <Input type="select" name="select" id="programSelect" defaultValue='Select A Program' >
+                    <Input
+                        type="select"
+                        name="select"
+                        id="programSelect"
+                        defaultValue='Select A Program'
+                        value={programSelect}
+                        onChange={e => setProgramSelect(e.target.value)}
+                    >
                         <option disabled>Select A Program</option>
                         <option>Summer Camp</option>
                         <option>Small Group Training</option>
@@ -122,12 +131,18 @@ function FeedbackForm() {
                 </FormGroup>
                 <FormGroup>
                     <Label for="comments"> Anything else you'd like us to know </Label>
-                    <Input type="textarea" name="comments" id="comments" />
+                    <Input
+                        type="textarea"
+                        name="comments"
+                        id="comments"
+                        value={comments}
+                        onChange={e => setComments(e.target.value)}
+                    />
                 </FormGroup>
                 <Col sm={{ offset: 4 }}>
                     <Button type='submit' className='regButton'>Register</Button>
                 </Col>
-            </Form>
+            </Form >
     )
 }
 
