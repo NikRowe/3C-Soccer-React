@@ -22,7 +22,7 @@ class SummerCamps extends Component {
         return (
             <>
                 <div className="row">
-                    <h1 className="col-sm-6 col-md-5 text-nowrap pageTitle"> Summer Camps </h1>
+                    <h1 className="col-sm-6 col-md-5 pageTitle"> Summer Camps </h1>
                 </div>
                 <div style={{fontSize: 20}}>
                     <p>Due to COVID-19 restrictions, our Summer Camp scheduled for <span style={{fontWeight: 'bold'}}>June 16th - July 10th</span> has been postponed.</p>
