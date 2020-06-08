@@ -26,15 +26,15 @@ const NavBar = (props) => {
     }
 
     return (
-        <Navbar sticky="top" light expand="lg" className="navbar">
+        <Navbar sticky="top" light expand="lg" className="navbar w-100 position-absolute">
             {/* Mobile Display Logo */}
-            {/* <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand> */}
-            <Tablet>
+            <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            {/* <Tablet>
                 <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             </Tablet>
             <Mobile>
                 <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            </Mobile>
+            </Mobile> */}
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse">
                 <Nav navbar className="mr-auto">
@@ -49,8 +49,8 @@ const NavBar = (props) => {
                     </NavItem>
                 </Nav>
                 {/* Desktop display logo */}
-                {/* <NavbarBrand href="/" className="desktopNavImg d-none d-lg-block mr-0 mt-5 pt-4 pb-0"><img src="/Img/Logo.png" width="150" height="150" alt="3C Soccer Logo" />
-                </NavbarBrand> */}
+                <NavbarBrand href="/" className="desktopNavImg d-none d-lg-block mr-0 mt-5 pt-4 pb-0"><img src="/Img/Logo.png" width="150" height="150" alt="3C Soccer Logo" />
+                </NavbarBrand>
             </Collapse>
         </Navbar>
     )
