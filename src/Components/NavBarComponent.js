@@ -13,10 +13,14 @@ import {
 const NavBar = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [mobileNavLogo, setMobileNavLogo] = useState(false)
 
     const toggle = () => {
         setIsOpen(!isOpen)
-        // document.getElementById('navbar').style.paddingTop = '0px'
+        setMobileNavLogo(!mobileNavLogo)
+        if (mobileNavLogo) {
+            document.getElementById('navbar').style.paddingTop = '0px'
+        } 
     };
 
     return (
