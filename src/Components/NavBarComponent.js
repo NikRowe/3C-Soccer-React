@@ -16,10 +16,12 @@ const NavBar = (props) => {
 
     const toggle = () => {
         setIsOpen(!isOpen);
-        if (isOpen) {
-            document.getElementById('navbar').style.paddingTop = '-150x';
+        if (isOpen === true ) {
+            document.getElementById('navbar').style.paddingTop = '-100px';
+            document.getElementById('navbar').style.marginTop = '-100px';
         } else {
             document.getElementById('navbar').style.paddingTop = '0px'
+            document.getElementById('navbar').style.marginTop = '0px'
         }
     }
 
