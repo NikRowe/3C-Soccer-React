@@ -17,9 +17,9 @@ const NavBar = (props) => {
     const toggle = () => {
         setIsOpen(!isOpen);
         if (isOpen) {
-            document.getElementById('navbar').style.marginTop = '-20px';
+            document.getElementById('navbar').style.paddingTop = '-100px';
         } else {
-            document.getElementById('navbar').style.marginTop = '0px'
+            document.getElementById('navbar').style.paddingTop = '0px'
         }
     }
 
