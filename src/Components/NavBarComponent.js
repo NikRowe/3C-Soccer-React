@@ -14,7 +14,14 @@ const NavBar = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => {
+        if (isOpen === false) {
+            document.getElementById('navitems').style.display = 'none'
+        } else if (isOpen === true ) {
+            document.getElementById('navitems').style.display = 'block'
+        }
+        setIsOpen(!isOpen);
+    }
 
 
     const Tablet = ({ children }) => {
@@ -38,7 +45,7 @@ const NavBar = (props) => {
             </Mobile> */}
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse position-relative container-fluid" id="collapse">
-                <Nav navbar className="mr-auto" >
+                <Nav navbar className="mr-auto" id='navitems'>
                     <NavItem className="navButton">
                         <NavLink className="text-white" href="/about">About</NavLink>
                     </NavItem>
