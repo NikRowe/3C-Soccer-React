@@ -87,7 +87,6 @@ body {
 }
 
 .hamburger {
- color: #1376bc;
  border: solid 2px #1376bc;
  border-radius: 25%;
  padding-top: 1vh;
@@ -96,8 +95,8 @@ body {
  padding-bottom: 1vh;
 }
 
-.hamburger:active {
-  color: #fff200;
-  border: solid 2px #fff200;
+#hamburger {
+  border-color: #1376bc;
+  color: #1376bc;
 }
 

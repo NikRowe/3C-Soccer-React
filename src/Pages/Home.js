@@ -12,9 +12,9 @@ class Home extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="row">
+                <div className="row" >
                     {/* The Video */}
-                    <video autoPlay muted loop controls id="bgVideo">
+                    <video autoPlay muted loop controls playsInline id="bgVideo">
                         <source src="Img/NewHomeVid.mp4" alt="3C Video" type="video/mp4" />
                     </video>
                 </div>
