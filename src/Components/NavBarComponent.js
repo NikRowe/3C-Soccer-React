@@ -15,28 +15,14 @@ const NavBar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
-        setIsOpen(!isOpen)};
-
-
-    const Tablet = ({ children }) => {
-        const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-        return isTablet ? children : null
-    }
-    const Mobile = ({ children }) => {
-        const isMobile = useMediaQuery({ maxWidth: 767 })
-        return isMobile ? children : null
-    }
+        setIsOpen(!isOpen)
+        // document.getElementById('navbar').style.paddingTop = '0px'
+    };
 
     return (
         <Navbar sticky="top" light expand="lg" className="navbar" id="navbar">
             {/* Mobile Display Logo */}
-            <NavbarBrand href="/" className="d-lg-none mt-2" id="mobileNavLogo"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            {/* <Tablet>
-                <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            </Tablet>
-            <Mobile>
-                <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            </Mobile> */}
+            <NavbarBrand href="/" className="d-lg-none mt-1" id="mobileNavLogo"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse " id="collapse">
                 <Nav navbar className="mr-auto" id='navitems'>
