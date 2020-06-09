@@ -79,3 +79,7 @@ body {
 .modalHeader { 
   color: #1376bc;
 }
+
+#mobileNavLogo {
+  max-height: 90%;
+}
