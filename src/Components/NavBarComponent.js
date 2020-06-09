@@ -14,7 +14,14 @@ const NavBar = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => {
+        setIsOpen(!isOpen);
+        if (isOpen) {
+            document.getElementById('navbar').style.marginTop = '-20px';
+        } else {
+            document.getElementById('navbar').style.marginTop = '0px'
+        }
+    }
 
     const Tablet = ({ children }) => {
         const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
@@ -26,7 +33,7 @@ const NavBar = (props) => {
     }
 
     return (
-        <Navbar sticky="top" light expand="lg" className="navbar">
+        <Navbar sticky="top" light expand="lg" className="navbar" id="navbar">
             {/* Mobile Display Logo */}
             <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             {/* <Tablet>
@@ -36,7 +43,7 @@ const NavBar = (props) => {
                 <NavbarBrand href="/" className="d-lg-none pt-5 mt-2"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             </Mobile> */}
             <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar className="collapse">
+            <Collapse isOpen={isOpen} navbar className="collapse" id="collapse">
                 <Nav navbar className="mr-auto">
                     <NavItem className="navButton">
                         <NavLink className="text-white" href="/about">About</NavLink>
