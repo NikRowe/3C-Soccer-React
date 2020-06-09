@@ -14,7 +14,7 @@ class Home extends Component {
             <div className="container-fluid">
                 <div className="row">
                     {/* The Video */}
-                    <video autoPlay muted loop id="bgVideo">
+                    <video autoPlay muted loop controls id="bgVideo">
                         <source src="Img/NewHomeVid.mp4" alt="3C Video" type="video/mp4" />
                     </video>
                 </div>
