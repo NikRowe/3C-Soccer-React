@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <div className="App home">
+      <div className="App homeVideoVertCenter">
         <Switch>
           <Route exact path="/" component={Home} />
           <div className="pages">

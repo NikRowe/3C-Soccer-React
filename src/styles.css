@@ -14,8 +14,8 @@ body {
   overflow: hidden;
 }
 
-.home {
-  margin-top: -25vh;
+.homeVideoVertCenter {
+  margin-top: -30vh;
 }
 
 .pages{
@@ -84,3 +84,19 @@ body {
   max-height: 100%;
   padding: 0px;
 }
+
+.hamburger {
+ color: #1376bc;
+ border: solid 2px #1376bc;
+ border-radius: 25%;
+ padding-top: 1vh;
+ padding-left: 2vw;
+ padding-right: 2vw;
+ padding-bottom: 1vh;
+}
+
+.hamburger:active {
+  color: #fff200;
+  border: solid 2px #fff200;
+}
+
