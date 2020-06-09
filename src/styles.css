@@ -20,6 +20,7 @@ body {
 
 .pages{
   margin-top:32vh;
+  position: relative;
 }
 
 .site-footer {
