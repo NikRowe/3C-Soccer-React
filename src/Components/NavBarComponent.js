@@ -17,16 +17,12 @@ const NavBar = (props) => {
 
     const toggle = () => {
         setIsOpen(!isOpen)
-        setMobileNavLogo(!mobileNavLogo)
-        if (mobileNavLogo) {
-            document.getElementById('navbar').style.paddingTop = '0px'
-        } 
     };
 
     return (
         <Navbar sticky="top" light expand="lg" className="navbar" id="navbar">
             {/* Mobile Display Logo */}
-            <NavbarBrand href="/" className="d-lg-none mt-1" id="mobileNavLogo"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
+            <NavbarBrand href="/" className="d-lg-none" id="mobileNavLogo"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="collapse " id="collapse">
                 <Nav navbar className="mr-auto" id='navitems'>
