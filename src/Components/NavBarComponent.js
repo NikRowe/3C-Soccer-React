@@ -14,16 +14,8 @@ const NavBar = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-        if (isOpen === true ) {
-            document.getElementById('navbar').style.paddingTop = '-100px';
-            document.getElementById('navbar').style.marginTop = '-100px';
-        } else {
-            document.getElementById('navbar').style.paddingTop = '0px'
-            document.getElementById('navbar').style.marginTop = '0px'
-        }
-    }
+    const toggle = () => setIsOpen(!isOpen);
+        
 
     const Tablet = ({ children }) => {
         const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
