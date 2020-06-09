@@ -15,7 +15,7 @@ class Home extends Component {
                 <div className="row">
                     {/* The Video */}
                     <video autoPlay muted loop id="bgVideo">
-                        <source src="Img/3cSoccerHomePageVid.mp4" alt="3C Video" type="video/mp4" />
+                        <source src="Img/NewHomeVid.mp4" alt="3C Video" type="video/mp4" />
                     </video>
                 </div>
             </div>

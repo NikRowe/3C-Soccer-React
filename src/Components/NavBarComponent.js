@@ -34,7 +34,7 @@ const NavBar = (props) => {
         <Navbar sticky="top" light expand="lg" className="navbar" id="navbar">
             {/* Mobile Display Logo */}
             <NavbarBrand href="/" className="d-lg-none" id="mobileNavLogo"> <img src="/Img/Logo.png" width="125" height="125" alt="3C Soccer Logo" /> </NavbarBrand>
-            <FontAwesomeIcon icon={faBars} onClick={toggle} id="hamburger" size="3x" className='hamburger'/>
+            <FontAwesomeIcon icon={faBars} onClick={toggle} id="hamburger" size="3x" className='hamburger navbar-toggler'/>
             <Collapse isOpen={isOpen} navbar className="collapse " id="collapse">
                 <Nav navbar className="mr-auto" id='navitems'>
                     <NavItem className="navButton">

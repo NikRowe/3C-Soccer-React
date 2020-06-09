@@ -6,6 +6,7 @@
 #bgVideo {
     position: relative;
     left: 0;
+    margin-top: 5vh;
     min-width: 100vw;
     z-index: -1;
 }
